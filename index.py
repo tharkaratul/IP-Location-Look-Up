@@ -55,10 +55,6 @@ def ssl_info(domain):
                 print(f"{Fore.GREEN}-----------------------------------------------------{Style.RESET_ALL}")
                 print("Valid from:", cert["notBefore"])
                 print("Valid until:", cert["notAfter"])
-
-                #subject = dict(x[0] for x in cert['subject'])
-                #org = subject.get('organizationName', 'N/A')
-                #print("Organization name:", org)
                 return cert
     except Exception as e:
         print(f"Error getting SSL info: {e}")
